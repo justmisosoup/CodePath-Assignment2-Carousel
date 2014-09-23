@@ -18,7 +18,6 @@ class IntroScrollViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var introTile4: UIImageView!
     @IBOutlet weak var introTile5: UIImageView!
     @IBOutlet weak var introTile6: UIImageView!
-
     @IBOutlet weak var introView: UIImageView!
     
     var yOffsets : [Float] = [-285, -240, -415, -408, -480, -500]
@@ -111,7 +110,6 @@ class IntroScrollViewController: UIViewController, UIScrollViewDelegate {
         introTile6.transform = CGAffineTransformMakeTranslation(CGFloat(tx6), CGFloat(ty6))
         introTile6.transform = CGAffineTransformScale(introTile6.transform, CGFloat(scale6), CGFloat(scale6))
         introTile6.transform = CGAffineTransformRotate(introTile6.transform, CGFloat(Double(rotation6) * M_PI / 180))
-        
         
         
     }

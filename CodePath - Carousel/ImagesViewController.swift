@@ -13,7 +13,8 @@ class ImagesViewController: UIViewController {
 
     @IBOutlet weak var imageScrollView: UIScrollView!
     override func viewDidLoad() {
-        super.viewDidLoad(imageScrollView.contentSize = CGSize(width: 320, height: 1594))
+        super.viewDidLoad()
+        imageScrollView.contentSize = CGSize(width: 320, height: 1594)
 
         // Do any additional setup after loading the view.
     }

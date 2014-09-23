@@ -14,6 +14,8 @@
 		022DB2C719CCB40900E1914B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022DB2C619CCB40900E1914B /* SignInViewController.swift */; };
 		022DB2C919CCEC2200E1914B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022DB2C819CCEC2200E1914B /* OnboardingViewController.swift */; };
 		022DB2CB19CCF80500E1914B /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022DB2CA19CCF80500E1914B /* ImagesViewController.swift */; };
+		022EEACF19D0ABC100F31883 /* CreateDropboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022EEACE19D0ABC100F31883 /* CreateDropboxViewController.swift */; };
+		022EEAD119D0DD3300F31883 /* TermsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022EEAD019D0DD3300F31883 /* TermsWebViewController.swift */; };
 		02EE2F8419CCA0B400B1EC1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE2F8319CCA0B400B1EC1B /* AppDelegate.swift */; };
 		02EE2F8619CCA0B400B1EC1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE2F8519CCA0B400B1EC1B /* ViewController.swift */; };
 		02EE2F8919CCA0B400B1EC1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02EE2F8719CCA0B400B1EC1B /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		022DB2C619CCB40900E1914B /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		022DB2C819CCEC2200E1914B /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		022DB2CA19CCF80500E1914B /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		022EEACE19D0ABC100F31883 /* CreateDropboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateDropboxViewController.swift; sourceTree = "<group>"; };
+		022EEAD019D0DD3300F31883 /* TermsWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsWebViewController.swift; sourceTree = "<group>"; };
 		02EE2F7E19CCA0B400B1EC1B /* CodePath - Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodePath - Carousel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02EE2F8219CCA0B400B1EC1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02EE2F8319CCA0B400B1EC1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				02EE2F8319CCA0B400B1EC1B /* AppDelegate.swift */,
 				02EE2F8519CCA0B400B1EC1B /* ViewController.swift */,
 				02EE2F8719CCA0B400B1EC1B /* Main.storyboard */,
+				022EEAD019D0DD3300F31883 /* TermsWebViewController.swift */,
+				022EEACE19D0ABC100F31883 /* CreateDropboxViewController.swift */,
 				0226ACC819CF7D9800F21AEB /* SettingsViewController.swift */,
 				0226ACC619CF735400F21AEB /* ConversationsViewController.swift */,
 				022DB2CA19CCF80500E1914B /* ImagesViewController.swift */,
@@ -235,9 +241,11 @@
 			files = (
 				022DB2C519CCB2CF00E1914B /* LogInViewController.swift in Sources */,
 				022DB2CB19CCF80500E1914B /* ImagesViewController.swift in Sources */,
+				022EEAD119D0DD3300F31883 /* TermsWebViewController.swift in Sources */,
 				022DB2C919CCEC2200E1914B /* OnboardingViewController.swift in Sources */,
 				0226ACC719CF735400F21AEB /* ConversationsViewController.swift in Sources */,
 				02EE2F8619CCA0B400B1EC1B /* ViewController.swift in Sources */,
+				022EEACF19D0ABC100F31883 /* CreateDropboxViewController.swift in Sources */,
 				02EE2F8419CCA0B400B1EC1B /* AppDelegate.swift in Sources */,
 				022DB2C719CCB40900E1914B /* SignInViewController.swift in Sources */,
 				022DB2C319CCABD000E1914B /* IntroScrollViewController.swift in Sources */,

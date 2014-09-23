@@ -8,43 +8,99 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate {
 
+    @IBOutlet weak var signInButtonViewContainer: UIView!
+    @IBOutlet weak var signInViewContainer: UIView!
+    @IBOutlet weak var logInText: UIImageView!
+    @IBOutlet weak var logInButtonImg: UIImageView!
+    @IBOutlet weak var logInForm: UIImageView!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var activityLoaderView: UIActivityIndicatorView!
     @IBAction func onLoginButton(sender: UIButton) {
         
-        // Start animating activityLoaderView when onLoginButton is tapped
+        // Prompt UIAlertView when onLoginButton is tapped
         
-        activityLoaderView.startAnimating()
+        var alertView = UIAlertView(title: "Logging in...", message: nil, delegate: self, cancelButtonTitle: nil)
+        alertView.show()
         
-        // Delay with activityLoaderView for 2 seconds
+        // Delay with UIAlertView for 2 seconds
         
         delay(2, closure: { () -> () in
             
             // Check to see if emailTextField has the proper credentials - email & password, which I have set to "tim@codepath.com" and "Password"... :)
             
             if(self.emailTextField.text == "tim@codepath.com" ) && (self.passwordTextField.text == "Password") {
-                self.activityLoaderView.stopAnimating()
+                alertView.dismissWithClickedButtonIndex(0, animated: true)
                 self.performSegueWithIdentifier("logInSegue", sender: self)
+                
+            }
+                
+            else if(self.emailTextField.text.isEmpty ) && (self.passwordTextField.text.isEmpty) {
+                alertView.dismissWithClickedButtonIndex(0, animated: true)
+                UIAlertView(title: "Whoops!", message: "You need to enter in an email and password to log-in.", delegate: nil, cancelButtonTitle: "Try Again...").show()
                 
             }
             
             // In the event that the user has not entered in the proper credentials prompt a UIAlertView
                 
             else {
-                
-                UIAlertView(title: "Uh oh!", message: "You need to enter in a valid email address and password!", delegate: nil, cancelButtonTitle: "Try Again...").show()
+                alertView.dismissWithClickedButtonIndex(0, animated: true)
+                UIAlertView(title: "Uh oh!", message: "Your log-in credentials were wrong!", delegate: nil, cancelButtonTitle: "Try Again...").show()
             }
             
-            // Stop animating after the UIAlertView has been prompted and dismissed
-            
-            self.activityLoaderView.stopAnimating()
         })
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.delegate = self
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+     
+    }
+
+    func keyboardWillShow(notification: NSNotification!) {
+        
+        self.signInViewContainer.tag = Int(self.signInViewContainer.frame.origin.y)
+        self.signInButtonViewContainer.tag = Int(self.signInButtonViewContainer.frame.origin.y)
+
+        var userInfo = notification.userInfo!
+        
+        // Get the keyboard height and width from the notification
+        // Size varies depending on OS, language, orientation
+        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as NSValue).CGRectValue().size
+        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
+        var animationDuration = durationValue.doubleValue
+        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
+        var animationCurve = curveValue.integerValue
+        
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!, animations: {
+            
+                self.signInViewContainer.frame.origin.y = -26;
+                self.signInButtonViewContainer.frame.origin.y = 160;
+            
+            
+            }, completion: nil)
+
+    }
+    func keyboardWillHide(notification: NSNotification!) {
+        var userInfo = notification.userInfo!
+        
+        // Get the keyboard height and width from the notification
+        // Size varies depending on OS, language, orientation
+        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as NSValue).CGRectValue().size
+        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
+        var animationDuration = durationValue.doubleValue
+        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
+        var animationCurve = curveValue.integerValue
+        
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!, animations: {
+           
+           self.signInViewContainer.frame.origin.y = CGFloat(self.signInViewContainer.tag);
+           self.signInButtonViewContainer.frame.origin.y = CGFloat(self.signInButtonViewContainer.tag);
+
+            }, completion: nil)
     }
     
     func delay(delay:Double, closure:()->()) {
@@ -55,6 +111,7 @@ class SignInViewController: UIViewController {
             ),
             dispatch_get_main_queue(), closure)
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
