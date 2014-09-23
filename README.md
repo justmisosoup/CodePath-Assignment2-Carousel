@@ -21,6 +21,6 @@ Notes:
 
 Walkthrough of all user stories:
 
-![Video Walkthrough](none)
+![Video Walkthrough](carousel_assignment.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
