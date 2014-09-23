@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>659C0858-67CB-4030-A9F7-EA2B5A94D473</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CodePath - Carousel</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>82F660B00D05447EF58C009AD6D7910266285B6E</key>
+		<string>https://github.com/littlemisosoup/CodePath-Assignment2-Carousel.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CodePath - Carousel.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>82F660B00D05447EF58C009AD6D7910266285B6E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/littlemisosoup/CodePath-Assignment2-Carousel.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>82F660B00D05447EF58C009AD6D7910266285B6E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>82F660B00D05447EF58C009AD6D7910266285B6E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CodePath-Assignment2-Carousel</string>
+		</dict>
+	</array>
+</dict>
+</plist>
