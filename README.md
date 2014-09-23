@@ -2,9 +2,9 @@
 
 This is a sample of the Dropbox Carousel log-in for iOS. All images were provided courtesy of CodePath. 
 
-Time spent: 7.5 hours total
+**Time spent:** 7.5 hours total
 
-Completed user stories:
+**Completed user stories:**
 
 * [x] Optional: Photo tiles move with scrolling
 * [x] Required: Tapping on email/password reveals the keyboard and shifts the scrollview and Sign In button up.
@@ -12,8 +12,8 @@ Completed user stories:
 * [x] Required: User sees a loading screen upon tapping the Sign In button.
 * [x] Required: User sees an error alert when entering the wrong email/password combination.
 * [x] Required: User is taken to the tutorial screens upon entering the correct email/password combination.
-* [ ] Optional: Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
-* [ ] Optonal: Optional: On appear, scale the form up and fade it in.
+* [ ] Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
+* [ ] Optional: On appear, scale the form up and fade it in.
 * [ ] Optional: Tapping in the form reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.
 * [x] Optional: Tapping the Agree to Terms checkbox selects the checkbox.
 * [x] Optional: Tapping on Terms shows a webview with the terms.
@@ -38,11 +38,11 @@ Settings
 * [ ] Optional: When all events are completed, dismiss the banner.
 
 
-Notes:
+**Notes:**
 
 
 
-Walkthrough of all user stories:
+**Walkthrough of all user stories:**
 
 ![Video Walkthrough](carousel_assignment.gif)
 
