@@ -75,7 +75,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDe
         var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
         var animationCurve = curveValue.integerValue
         
-        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!, animations: {
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(rawValue: UInt(animationCurve << 16)), animations: {
             
                 self.signInViewContainer.frame.origin.y = -26;
                 self.signInButtonViewContainer.frame.origin.y = 160;
@@ -95,7 +95,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDe
         var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
         var animationCurve = curveValue.integerValue
         
-        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!, animations: {
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(rawValue: UInt(animationCurve << 16)), animations: {
            
            self.signInViewContainer.frame.origin.y = CGFloat(self.signInViewContainer.tag);
            self.signInButtonViewContainer.frame.origin.y = CGFloat(self.signInButtonViewContainer.tag);
