@@ -14,7 +14,7 @@ class TermsWebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = NSURL(string: "https://www.dropbox.com/terms?mobile=1")
-        let request = NSURLRequest(URL: url!)
+        let request = NSURLRequest(URL: url)
         webView.loadRequest(request)
     }
 
