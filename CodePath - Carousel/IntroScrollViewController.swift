@@ -26,7 +26,7 @@ class IntroScrollViewController: UIViewController, UIScrollViewDelegate {
     var rotations : [Float] = [-10, -10, 10, 10, 10, -10]
     
     func convertValue(value: Float, r1Min: Float, r1Max: Float, r2Min: Float, r2Max: Float) -> Float {
-        var ratio = (r2Max - r2Min) / (r1Max - r1Min)
+        let ratio = (r2Max - r2Min) / (r1Max - r1Min)
         return value * ratio + r2Min - r1Min * ratio
     }
     
@@ -43,14 +43,14 @@ class IntroScrollViewController: UIViewController, UIScrollViewDelegate {
  
     func scrollViewDidScroll(introScrollView: UIScrollView) {
         
-        var offset = Float(introScrollView.contentOffset.y)
+        let offset = Float(introScrollView.contentOffset.y)
         
         // introTile1 Variables & Transforms
         
-        var tx1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -75, r2Max: 0)
-        var ty1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -280, r2Max: 0)
-        var scale1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1, r2Max: 1)
-        var rotation1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -10, r2Max: 0)
+        let tx1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -75, r2Max: 0)
+        let ty1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -280, r2Max: 0)
+        let scale1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1, r2Max: 1)
+        let rotation1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -10, r2Max: 0)
         
         introTile1.transform = CGAffineTransformMakeTranslation(CGFloat(tx1), CGFloat(ty1))
         introTile1.transform = CGAffineTransformScale(introTile1.transform, CGFloat(scale1), CGFloat(scale1))
@@ -58,10 +58,10 @@ class IntroScrollViewController: UIViewController, UIScrollViewDelegate {
         
         // introTile2 Variables & Transforms
         
-        var tx2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 32, r2Max: 0)
-        var ty2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -254, r2Max: 0)
-        var scale2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1.65, r2Max: 1)
-        var rotation2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -10, r2Max: 0)
+        let tx2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 32, r2Max: 0)
+        let ty2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -254, r2Max: 0)
+        let scale2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1.65, r2Max: 1)
+        let rotation2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -10, r2Max: 0)
         
         introTile2.transform = CGAffineTransformMakeTranslation(CGFloat(tx2), CGFloat(ty2))
         introTile2.transform = CGAffineTransformScale(introTile2.transform, CGFloat(scale2), CGFloat(scale2))
@@ -69,10 +69,10 @@ class IntroScrollViewController: UIViewController, UIScrollViewDelegate {
         
         // introTile3 Variables & Transforms
         
-        var tx3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 8, r2Max: 0)
-        var ty3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -415, r2Max: 0)
-        var scale3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1.65, r2Max: 1)
-        var rotation3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 10, r2Max: 0)
+        let tx3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 8, r2Max: 0)
+        let ty3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -415, r2Max: 0)
+        let scale3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1.65, r2Max: 1)
+        let rotation3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 10, r2Max: 0)
         
         introTile3.transform = CGAffineTransformMakeTranslation(CGFloat(tx3), CGFloat(ty3))
         introTile3.transform = CGAffineTransformScale(introTile3.transform, CGFloat(scale3), CGFloat(scale3))
@@ -80,10 +80,10 @@ class IntroScrollViewController: UIViewController, UIScrollViewDelegate {
         
         // introTile4 Variables & Transforms
         
-        var tx4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 75, r2Max: 0)
-        var ty4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -400, r2Max: 0)
-        var scale4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1.65, r2Max: 1)
-        var rotation4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 10, r2Max: 0)
+        let tx4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 75, r2Max: 0)
+        let ty4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -400, r2Max: 0)
+        let scale4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1.65, r2Max: 1)
+        let rotation4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 10, r2Max: 0)
         
         introTile4.transform = CGAffineTransformMakeTranslation(CGFloat(tx4), CGFloat(ty4))
         introTile4.transform = CGAffineTransformScale(introTile4.transform, CGFloat(scale4), CGFloat(scale4))
@@ -91,10 +91,10 @@ class IntroScrollViewController: UIViewController, UIScrollViewDelegate {
         
         // introTile5 Variables & Transforms
         
-        var tx5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -110, r2Max: 0)
-        var ty5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -505, r2Max: 0)
-        var scale5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1.65, r2Max: 1)
-        var rotation5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 10, r2Max: 0)
+        let tx5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -110, r2Max: 0)
+        let ty5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -505, r2Max: 0)
+        let scale5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1.65, r2Max: 1)
+        let rotation5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 10, r2Max: 0)
         
         introTile5.transform = CGAffineTransformMakeTranslation(CGFloat(tx5), CGFloat(ty5))
         introTile5.transform = CGAffineTransformScale(introTile5.transform, CGFloat(scale5), CGFloat(scale5))
@@ -102,10 +102,10 @@ class IntroScrollViewController: UIViewController, UIScrollViewDelegate {
         
         // introTile6 Variables & Transforms
         
-        var tx6 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -98, r2Max: 0)
-        var ty6 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -485, r2Max: 0)
-        var scale6 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1.65, r2Max: 1)
-        var rotation6 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -10, r2Max: 0)
+        let tx6 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -98, r2Max: 0)
+        let ty6 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -485, r2Max: 0)
+        let scale6 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: 1.65, r2Max: 1)
+        let rotation6 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: -10, r2Max: 0)
         
         introTile6.transform = CGAffineTransformMakeTranslation(CGFloat(tx6), CGFloat(ty6))
         introTile6.transform = CGAffineTransformScale(introTile6.transform, CGFloat(scale6), CGFloat(scale6))

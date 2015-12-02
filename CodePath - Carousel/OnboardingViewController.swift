@@ -30,7 +30,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
         }
     
     func scrollViewDidEndDecelerating(onboardingScrollView: UIScrollView) {
-        var page : Int = Int(round(onboardingScrollView.contentOffset.x / 320))
+        let page : Int = Int(round(onboardingScrollView.contentOffset.x / 320))
         
         pageController.currentPage = page
         

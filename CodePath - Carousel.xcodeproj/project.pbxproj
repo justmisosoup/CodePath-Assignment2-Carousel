@@ -183,6 +183,8 @@
 		02EE2F7619CCA0B400B1EC1B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Sara Menefee";
 				TargetAttributes = {

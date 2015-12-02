@@ -22,7 +22,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDe
         
         // Prompt UIAlertView when onLoginButton is tapped
         
-        var alertView = UIAlertView(title: "Logging in...", message: nil, delegate: self, cancelButtonTitle: nil)
+        let alertView = UIAlertView(title: "Logging in...", message: nil, delegate: self, cancelButtonTitle: nil)
         alertView.show()
         
         // Delay with UIAlertView for 2 seconds
@@ -37,7 +37,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDe
                 
             }
                 
-            else if(self.emailTextField.text.isEmpty ) && (self.passwordTextField.text.isEmpty) {
+            else if(self.emailTextField.text!.isEmpty ) && (self.passwordTextField.text!.isEmpty) {
                 alertView.dismissWithClickedButtonIndex(0, animated: true)
                 UIAlertView(title: "Whoops!", message: "You need to enter in an email and password to log-in.", delegate: nil, cancelButtonTitle: "Try Again...").show()
                 
@@ -70,13 +70,13 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDe
         
         // Get the keyboard height and width from the notification
         // Size varies depending on OS, language, orientation
-        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as NSValue).CGRectValue().size
-        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
-        var animationDuration = durationValue.doubleValue
-        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
-        var animationCurve = curveValue.integerValue
+        let kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
+        let durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
+        let animationDuration = durationValue.doubleValue
+        let curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
+        let animationCurve = curveValue.integerValue
         
-        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(UInt(animationCurve << 16)), animations: {
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(rawValue: UInt(animationCurve << 16)), animations: {
             
                 self.signInViewContainer.frame.origin.y = -26;
                 self.signInButtonViewContainer.frame.origin.y = 160;
@@ -90,13 +90,13 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDe
         
         // Get the keyboard height and width from the notification
         // Size varies depending on OS, language, orientation
-        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as NSValue).CGRectValue().size
-        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
-        var animationDuration = durationValue.doubleValue
-        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
-        var animationCurve = curveValue.integerValue
+        let kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
+        let durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
+        let animationDuration = durationValue.doubleValue
+        let curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
+        let animationCurve = curveValue.integerValue
         
-        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(UInt(animationCurve << 16)), animations: {
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(rawValue: UInt(animationCurve << 16)), animations: {
            
            self.signInViewContainer.frame.origin.y = CGFloat(self.signInViewContainer.tag);
            self.signInButtonViewContainer.frame.origin.y = CGFloat(self.signInButtonViewContainer.tag);
